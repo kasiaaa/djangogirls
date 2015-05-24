@@ -1,6 +1,8 @@
 <html>
     <head>
         <title>Strona Kasi</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     </head>
     <body>
     	<div>
@@ -14,5 +16,6 @@
         <p>{{ post.text|linebreaks }}</p>
     </div>
 {% endfor %}
+<a href="{% url 'blog.views.post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
     </body>
 </html>
