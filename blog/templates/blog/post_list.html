@@ -1,13 +1,15 @@
+{% load staticfiles %}
 <html>
     <head>
         <title>Strona Kasi</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
     	<div>
-    <h1><a href="/">Django Girls Blog</a></h1>
-</div>
+    		<h1><a href="/">Django Girls Blog</a></h1>
+		</div>
 
 {% for post in posts %}
     <div>
@@ -17,5 +19,6 @@
     </div>
 {% endfor %}
 <a href="{% url 'blog.views.post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+<a href="http://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">
     </body>
 </html>
